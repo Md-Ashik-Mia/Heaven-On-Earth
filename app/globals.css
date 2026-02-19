@@ -23,6 +23,14 @@
   --text-section-title-lh: 84px;
   --text-section-title-ls: 1.12px;
 
+  /* Relax section tokens */
+  --color-relax-bg: #f5f1ed;
+  --color-relax-body: #9d8b7a;
+  --text-relax-title-size: 48px;
+  --text-relax-title-lh: 64px;
+  --text-relax-title-ls: 0.96px;
+  --text-relax-body-lh: 1.9;
+
   /* Service card tokens */
   --color-service-title: #6b5945;
   --color-service-desc: #9d8b7a;
@@ -70,26 +78,21 @@ body {
   }
 
   .section-title {
-    color: var(--color-section-title);
+    color: #6b5945;
     font-family: var(--font-playfair);
-    font-size: var(--text-section-title-size);
+    font-size: 56px;
     font-weight: 400;
-    line-height: var(--text-section-title-lh);
-    letter-spacing: var(--text-section-title-ls);
+    line-height: 84px;
+    letter-spacing: 1.12px;
     text-align: center;
   }
 
   .text-hero {
-    /* color: var(--brand-ink);
-    font-family: var(--font-display);
-    font-size: var(--text-hero-size);
-    line-height: var(--text-hero-line); */
     color: #6b5945;
-    font-family: "Playfair Display";
+    font-family: var(--font-playfair);
     font-size: 72px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 78px; /* 108.333% */
+    line-height: 78px;
     letter-spacing: 1.44px;
   }
 
@@ -106,13 +109,31 @@ body {
   }
 
   /* Service card classes */
-  .service-card-title {
-    color: var(--color-service-title);
+  /* Relax section classes */
+  .relax-title {
+    color: #6b5945;
     font-family: var(--font-playfair);
-    font-size: var(--text-service-title-size);
+    font-size: 48px;
     font-weight: 400;
-    line-height: var(--text-service-title-lh);
-    letter-spacing: var(--text-service-title-ls);
+    line-height: 64px;
+    letter-spacing: 0.96px;
+  }
+
+  .relax-body {
+    color: #9d8b7a;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30.4px;
+  }
+
+  .service-card-title {
+    color: #6b5945;
+    font-family: var(--font-playfair);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.48px;
   }
 
   .service-card-desc {
