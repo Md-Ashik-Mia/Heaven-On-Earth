@@ -144,6 +144,32 @@ body {
     line-height: var(--text-service-desc-lh);
   }
 
+  /* Activities carousel classes */
+  .activity-title {
+    color: #6b5945;
+    font-family: var(--font-playfair);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0.96px;
+  }
+
+  .activity-subtitle {
+    color: #6b5945;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .activity-body {
+    color: #9d8b7a;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
   .service-card-link {
     color: var(--color-service-link);
     font-family: var(--font-body);
