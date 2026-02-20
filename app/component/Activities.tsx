@@ -1,9 +1,9 @@
 "use client";
 
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 import Image from "next/image";
 import { useState } from "react";
 import { RiArrowLeftLine, RiArrowRightWideLine } from "react-icons/ri";
-import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const slideImages = [
   "/images/home/activities/activity1.png",
@@ -41,7 +41,6 @@ const Activities = () => {
 
       {/* Content row */}
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 py-16 lg:py-24">
-
         {/* Left: fixed-size image */}
         <div className="relative w-full lg:flex-shrink-0 lg:w-[720px] h-[280px] sm:h-[400px] lg:h-[600px]">
           <Image
@@ -75,7 +74,8 @@ const Activities = () => {
           <h2
             style={{
               color: "#6b5945",
-              fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+              fontFamily:
+                "var(--font-playfair), 'Playfair Display', Georgia, serif",
               fontSize: "clamp(28px, 4vw, 48px)",
               fontWeight: 400,
               lineHeight: "1.33",
@@ -130,9 +130,7 @@ const Activities = () => {
             onClick={() => setCurrent(i)}
             aria-label={`Go to slide ${i + 1}`}
             className={`transition-all rounded-full ${
-              i === current
-                ? "w-8 h-2 bg-[#CFB9A3]"
-                : "w-2 h-2 bg-[#6b5945]/30"
+              i === current ? "w-8 h-2 bg-[#CFB9A3]" : "w-2 h-2 bg-[#6b5945]/30"
             }`}
           />
         ))}

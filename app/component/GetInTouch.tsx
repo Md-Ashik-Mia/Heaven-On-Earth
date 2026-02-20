@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import Image from "next/image";
 
 const GetInTouch = () => {
   const { t } = useLanguage();
@@ -10,7 +10,6 @@ const GetInTouch = () => {
       style={{ background: "#f5f1ed" }}
     >
       <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 py-16 lg:py-24">
-
         {/* Left: image with blob clip-path */}
         <div
           className="relative w-full lg:flex-shrink-0 lg:w-[480px] h-[340px] sm:h-[440px] lg:h-[580px]"
@@ -30,13 +29,13 @@ const GetInTouch = () => {
 
         {/* Right: text */}
         <div className="flex flex-col gap-8 w-full lg:max-w-[605px] text-center lg:text-left">
-
           {/* Title */}
           <div className="flex flex-col gap-3">
             <h2
               style={{
                 color: "#0F172A",
-                fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+                fontFamily:
+                  "var(--font-playfair), 'Playfair Display', Georgia, serif",
                 fontSize: "48px",
                 fontWeight: 700,
                 lineHeight: "67.2px",
@@ -46,11 +45,33 @@ const GetInTouch = () => {
             </h2>
             {/* Decorative SVG underlines */}
             <div className="flex flex-col gap-[2px]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="347" height="17" viewBox="0 0 347 17" fill="none">
-                <path d="M1 15.4787C13.5428 15.8463 26.0856 16.2138 69.2106 15.8518C112.336 15.4899 185.663 14.3873 235.498 12.3492C285.333 10.3111 309.453 7.37092 323.809 5.30499C338.164 3.23905 342.024 2.13647 346 1.00049" stroke="#CFB9A3" strokeWidth="2" strokeLinecap="round"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="347"
+                height="17"
+                viewBox="0 0 347 17"
+                fill="none"
+              >
+                <path
+                  d="M1 15.4787C13.5428 15.8463 26.0856 16.2138 69.2106 15.8518C112.336 15.4899 185.663 14.3873 235.498 12.3492C285.333 10.3111 309.453 7.37092 323.809 5.30499C338.164 3.23905 342.024 2.13647 346 1.00049"
+                  stroke="#CFB9A3"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="313" height="10" viewBox="0 0 313 10" fill="none">
-                <path d="M1 9C6.1315 9 11.263 9 43.2523 8.90571C75.2415 8.81143 133.933 8.62286 182.93 7.48857C231.927 6.35429 269.451 4.28 289.744 3.02286C310.037 1.76571 311.961 1.38857 312 1" stroke="#CFB9A3" strokeWidth="2" strokeLinecap="round"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="313"
+                height="10"
+                viewBox="0 0 313 10"
+                fill="none"
+              >
+                <path
+                  d="M1 9C6.1315 9 11.263 9 43.2523 8.90571C75.2415 8.81143 133.933 8.62286 182.93 7.48857C231.927 6.35429 269.451 4.28 289.744 3.02286C310.037 1.76571 311.961 1.38857 312 1"
+                  stroke="#CFB9A3"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
               </svg>
             </div>
           </div>
@@ -85,7 +106,6 @@ const GetInTouch = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

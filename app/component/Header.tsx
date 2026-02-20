@@ -12,7 +12,8 @@ const Header = () => {
         <div className="left w-full lg:w-auto text-center lg:text-left">
           <h4 className="text-kicker">{t.header.kicker}</h4>
           <h2 className="text-hero max-w-2xl text-4xl sm:text-5xl lg:text-7xl my-6">
-            {t.header.title[0]} <br /> {t.header.title[1]} <br /> {t.header.title[2]}
+            {t.header.title[0]} <br /> {t.header.title[1]} <br />{" "}
+            {t.header.title[2]}
           </h2>
           <h6 className="text-subtitle font-cambria text-base lg:text-lg leading-6 mb-11">
             {t.header.subtitle}

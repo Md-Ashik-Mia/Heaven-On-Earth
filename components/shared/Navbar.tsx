@@ -8,7 +8,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const navHrefs = ["/", "/philosophy", "/wellness", "/arrangements", "/memberships", "/activities", "/contact"];
+const navHrefs = [
+  "/",
+  "/philosophy",
+  "/wellness",
+  "/arrangements",
+  "/memberships",
+  "/activities",
+  "/contact",
+];
 const languageOptions: { label: string; value: Language }[] = [
   { label: "EN", value: "en" },
   { label: "NL", value: "nl" },
@@ -34,7 +42,8 @@ const Navbar = () => {
     ][i],
   }));
 
-  const activeLanguageLabel = languageOptions.find((o) => o.value === language)?.label ?? "EN";
+  const activeLanguageLabel =
+    languageOptions.find((o) => o.value === language)?.label ?? "EN";
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full bg-[#FCF2E9]">
@@ -194,7 +203,10 @@ const Navbar = () => {
                 <button
                   key={option.value}
                   type="button"
-                  onClick={() => { setLanguage(option.value as Language); setIsMenuOpen(false); }}
+                  onClick={() => {
+                    setLanguage(option.value as Language);
+                    setIsMenuOpen(false);
+                  }}
                   className={`px-3 py-1 rounded-md text-[14px] font-semibold font-serif border transition-colors ${
                     language === option.value
                       ? "bg-[#CFB9A3] text-[#0F172A] border-[#CFB9A3]"
@@ -205,7 +217,7 @@ const Navbar = () => {
                 </button>
               ))}
             </div>
-          <div className="mt-2 flex flex-col gap-2">
+            <div className="mt-2 flex flex-col gap-2">
               <Link
                 href="/login"
                 className="flex items-center justify-center gap-3 rounded-md border border-[#CFB9A3] bg-transparent px-8 py-4 text-[16px] font-bold font-serif text-[#0F172A] transition-all hover:border-[#C4AD96] hover:text-[#0F172A] active:scale-95"

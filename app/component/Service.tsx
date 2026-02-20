@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import Image from "next/image";
 
 const Service = () => {
   const { t } = useLanguage();
@@ -20,12 +20,21 @@ const Service = () => {
             <article key={service.title} className="text-center">
               <div className="mx-auto w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[360px] lg:h-[360px] rounded-full bg-[#E9DED1] p-4">
                 <div className="relative w-full h-full overflow-hidden rounded-full">
-                  <Image src={service.image} alt={service.title} fill className="object-cover" />
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
               <h3 className="service-card-title mt-[48px]">{service.title}</h3>
-              <p className="service-card-desc mt-3 px-3">{service.description}</p>
-              <button className="service-card-link mt-4">{t.service.learnMore}</button>
+              <p className="service-card-desc mt-3 px-3">
+                {service.description}
+              </p>
+              <button className="service-card-link mt-4">
+                {t.service.learnMore}
+              </button>
             </article>
           ))}
         </div>

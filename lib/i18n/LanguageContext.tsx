@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 import { Language, Translations, translations } from "./translations";
 
 type LanguageContextType = {
@@ -24,7 +24,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <LanguageContext.Provider
-      value={{ language, setLanguage: handleSetLanguage, t: translations[language] as unknown as Translations }}
+      value={{
+        language,
+        setLanguage: handleSetLanguage,
+        t: translations[language] as unknown as Translations,
+      }}
     >
       {children}
     </LanguageContext.Provider>

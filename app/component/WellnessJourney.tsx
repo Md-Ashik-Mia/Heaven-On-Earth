@@ -22,7 +22,8 @@ const WellnessJourney = () => {
         <h2
           style={{
             color: "#FFFFFF",
-            fontFamily: "var(--font-playfair), 'Playfair Display', Georgia, serif",
+            fontFamily:
+              "var(--font-playfair), 'Playfair Display', Georgia, serif",
             fontSize: "clamp(28px, 5vw, 48px)",
             fontWeight: 700,
             lineHeight: "67.2px",

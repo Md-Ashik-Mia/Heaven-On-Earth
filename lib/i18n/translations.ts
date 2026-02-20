@@ -16,7 +16,8 @@ export const translations = {
     header: {
       kicker: "A Different Approach to Health and Wellness",
       title: ["Heaven is place", "on earth. Lunch.", "Relax. Celebrate."],
-      subtitle: "Where wellness, dining, and meaningful moments come together in perfect harmony.",
+      subtitle:
+        "Where wellness, dining, and meaningful moments come together in perfect harmony.",
     },
     service: {
       kicker: "Discover Our",
@@ -25,24 +26,30 @@ export const translations = {
       items: [
         {
           title: "The Lunchroom",
-          description: "Seasonal, refined dining in a calm and elegant setting where you can truly savor each moment.",
+          description:
+            "Seasonal, refined dining in a calm and elegant setting where you can truly savor each moment.",
         },
         {
           title: "Saunas & Wellness",
-          description: "A sanctuary of warmth and stillness, designed for deep relaxation and inner balance.",
+          description:
+            "A sanctuary of warmth and stillness, designed for deep relaxation and inner balance.",
         },
         {
           title: "Multifunctional Space",
-          description: "A serene space for gatherings, movement, and meaningful moments in thoughtful design.",
+          description:
+            "A serene space for gatherings, movement, and meaningful moments in thoughtful design.",
         },
       ],
     },
     relax: {
       kicker: "Helping you make better",
       title: "Relax. Enjoy.",
-      body1: "This is where your brand story comes to life. What makes your approach unique? Why should future clients choose to join your wellness journey?",
-      body2: "A warm, stylish environment where you can relax, enjoy and connect",
-      body3: "From healthy lunches and artisanal ice cream to luxurious wellness and inspiring gatherings, here you step out of the crowds and recharge, inside and out.",
+      body1:
+        "This is where your brand story comes to life. What makes your approach unique? Why should future clients choose to join your wellness journey?",
+      body2:
+        "A warm, stylish environment where you can relax, enjoy and connect",
+      body3:
+        "From healthy lunches and artisanal ice cream to luxurious wellness and inspiring gatherings, here you step out of the crowds and recharge, inside and out.",
     },
     activities: {
       kicker: "Activities",
@@ -67,14 +74,18 @@ export const translations = {
     getInTouch: {
       title: "Get in touch",
       contacts: [
-        { label: "Address", value: "123 Anywhene St. Any City, State, Country 12345" },
+        {
+          label: "Address",
+          value: "123 Anywhene St. Any City, State, Country 12345",
+        },
         { label: "Openingshours", value: "www.heavenlymomments.nl" },
         { label: "Phone number", value: "+316 16017000" },
       ],
     },
     wellnessJourney: {
       title: "Begin Your Wellness Journey",
-      subtitle: "Reconnect with your inner balance in a space where time slows down and clarity begins.",
+      subtitle:
+        "Reconnect with your inner balance in a space where time slows down and clarity begins.",
       bookNow: "Book Now",
     },
   },
@@ -94,7 +105,8 @@ export const translations = {
     header: {
       kicker: "Een andere benadering van gezondheid en welzijn",
       title: ["De hemel is een plek", "op aarde. Lunch.", "Ontspan. Vier."],
-      subtitle: "Waar wellness, dineren en betekenisvolle momenten samenkomen in perfecte harmonie.",
+      subtitle:
+        "Waar wellness, dineren en betekenisvolle momenten samenkomen in perfecte harmonie.",
     },
     service: {
       kicker: "Ontdek Onze",
@@ -103,24 +115,30 @@ export const translations = {
       items: [
         {
           title: "De Lunchroom",
-          description: "Seizoensgebonden, verfijnd dineren in een rustige en elegante omgeving waar u elk moment kunt savoureren.",
+          description:
+            "Seizoensgebonden, verfijnd dineren in een rustige en elegante omgeving waar u elk moment kunt savoureren.",
         },
         {
           title: "Sauna's & Wellness",
-          description: "Een toevluchtsoord van warmte en stilte, ontworpen voor diepe ontspanning en innerlijk evenwicht.",
+          description:
+            "Een toevluchtsoord van warmte en stilte, ontworpen voor diepe ontspanning en innerlijk evenwicht.",
         },
         {
           title: "Multifunctionele Ruimte",
-          description: "Een serene ruimte voor bijeenkomsten, beweging en betekenisvolle momenten in een doordacht ontwerp.",
+          description:
+            "Een serene ruimte voor bijeenkomsten, beweging en betekenisvolle momenten in een doordacht ontwerp.",
         },
       ],
     },
     relax: {
       kicker: "Wij helpen u het beter te maken",
       title: "Ontspan. Geniet.",
-      body1: "Dit is waar uw merkverhaal tot leven komt. Wat maakt uw aanpak uniek? Waarom zouden toekomstige klanten kiezen voor uw wellnesstraject?",
-      body2: "Een warme, stijlvolle omgeving waar u kunt ontspannen, genieten en verbinden.",
-      body3: "Van gezonde lunches en ambachtelijk ijs tot luxueuze wellness en inspirerende bijeenkomsten — hier stapt u uit de drukte en laadt u op, van binnen en buiten.",
+      body1:
+        "Dit is waar uw merkverhaal tot leven komt. Wat maakt uw aanpak uniek? Waarom zouden toekomstige klanten kiezen voor uw wellnesstraject?",
+      body2:
+        "Een warme, stijlvolle omgeving waar u kunt ontspannen, genieten en verbinden.",
+      body3:
+        "Van gezonde lunches en ambachtelijk ijs tot luxueuze wellness en inspirerende bijeenkomsten — hier stapt u uit de drukte en laadt u op, van binnen en buiten.",
     },
     activities: {
       kicker: "Activiteiten",
@@ -145,14 +163,18 @@ export const translations = {
     getInTouch: {
       title: "Neem contact op",
       contacts: [
-        { label: "Adres", value: "123 Anywhene St. Any City, State, Country 12345" },
+        {
+          label: "Adres",
+          value: "123 Anywhene St. Any City, State, Country 12345",
+        },
         { label: "Openingstijden", value: "www.heavenlymomments.nl" },
         { label: "Telefoonnummer", value: "+316 16017000" },
       ],
     },
     wellnessJourney: {
       title: "Begin uw wellnessreis",
-      subtitle: "Herverbind u met uw innerlijke balans op een plek waar de tijd vertraagt en helderheid begint.",
+      subtitle:
+        "Herverbind u met uw innerlijke balans op een plek waar de tijd vertraagt en helderheid begint.",
       bookNow: "Boek Nu",
     },
   },
@@ -171,8 +193,13 @@ export const translations = {
     },
     header: {
       kicker: "Ein anderer Ansatz für Gesundheit und Wohlbefinden",
-      title: ["Der Himmel ist ein Ort", "auf Erden. Mittagessen.", "Entspannen. Feiern."],
-      subtitle: "Wo Wellness, Gastronomie und bedeutungsvolle Momente in perfekter Harmonie zusammenkommen.",
+      title: [
+        "Der Himmel ist ein Ort",
+        "auf Erden. Mittagessen.",
+        "Entspannen. Feiern.",
+      ],
+      subtitle:
+        "Wo Wellness, Gastronomie und bedeutungsvolle Momente in perfekter Harmonie zusammenkommen.",
     },
     service: {
       kicker: "Entdecken Sie",
@@ -181,24 +208,30 @@ export const translations = {
       items: [
         {
           title: "Das Mittagsrestaurant",
-          description: "Saisonale, verfeinerte Küche in einem ruhigen und eleganten Ambiente, in dem Sie jeden Moment genießen können.",
+          description:
+            "Saisonale, verfeinerte Küche in einem ruhigen und eleganten Ambiente, in dem Sie jeden Moment genießen können.",
         },
         {
           title: "Saunen & Wellness",
-          description: "Ein Ort der Wärme und Stille, der für tiefe Entspannung und innere Balance gestaltet wurde.",
+          description:
+            "Ein Ort der Wärme und Stille, der für tiefe Entspannung und innere Balance gestaltet wurde.",
         },
         {
           title: "Multifunktionaler Raum",
-          description: "Ein ruhiger Raum für Veranstaltungen, Bewegung und bedeutungsvolle Momente in durchdachtem Design.",
+          description:
+            "Ein ruhiger Raum für Veranstaltungen, Bewegung und bedeutungsvolle Momente in durchdachtem Design.",
         },
       ],
     },
     relax: {
       kicker: "Wir helfen Ihnen, es besser zu machen",
       title: "Entspannen. Genießen.",
-      body1: "Hier kommt Ihre Markengeschichte zum Leben. Was macht Ihren Ansatz einzigartig? Warum sollten zukünftige Kunden Ihrer Wellness-Reise beitreten?",
-      body2: "Eine warme, stilvolle Umgebung, in der Sie entspannen, genießen und in Kontakt treten können.",
-      body3: "Von gesunden Mittagessen und handgefertigtem Eis bis hin zu luxuriösem Wellness und inspirierenden Veranstaltungen — hier treten Sie aus dem Trubel heraus und tanken Kraft.",
+      body1:
+        "Hier kommt Ihre Markengeschichte zum Leben. Was macht Ihren Ansatz einzigartig? Warum sollten zukünftige Kunden Ihrer Wellness-Reise beitreten?",
+      body2:
+        "Eine warme, stilvolle Umgebung, in der Sie entspannen, genießen und in Kontakt treten können.",
+      body3:
+        "Von gesunden Mittagessen und handgefertigtem Eis bis hin zu luxuriösem Wellness und inspirierenden Veranstaltungen — hier treten Sie aus dem Trubel heraus und tanken Kraft.",
     },
     activities: {
       kicker: "Aktivitäten",
@@ -223,14 +256,18 @@ export const translations = {
     getInTouch: {
       title: "Kontakt aufnehmen",
       contacts: [
-        { label: "Adresse", value: "123 Anywhene St. Any City, State, Country 12345" },
+        {
+          label: "Adresse",
+          value: "123 Anywhene St. Any City, State, Country 12345",
+        },
         { label: "Öffnungszeiten", value: "www.heavenlymomments.nl" },
         { label: "Telefonnummer", value: "+316 16017000" },
       ],
     },
     wellnessJourney: {
       title: "Beginnen Sie Ihre Wellness-Reise",
-      subtitle: "Verbinden Sie sich wieder mit Ihrer inneren Balance an einem Ort, an dem die Zeit verlangsamt und Klarheit beginnt.",
+      subtitle:
+        "Verbinden Sie sich wieder mit Ihrer inneren Balance an einem Ort, an dem die Zeit verlangsamt und Klarheit beginnt.",
       bookNow: "Jetzt Buchen",
     },
   },
