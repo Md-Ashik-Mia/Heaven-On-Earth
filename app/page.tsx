@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/Footer";
 import Activities from "./component/Activities";
 import GetInTouch from "./component/GetInTouch";
 import Header from "./component/Header";
@@ -16,6 +17,7 @@ export default function Home() {
       <Activities />
       <GetInTouch />
       <WellnessJourney />
+      <Footer />
     </div>
   );
 }
