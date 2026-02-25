@@ -2,28 +2,28 @@
 
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import Image from "next/image";
-import { BiDrink } from "react-icons/bi";
+import { LuFlower2 } from "react-icons/lu";
 
-export default function BeveragesSection() {
+export default function WeddingsSection() {
   const { t } = useLanguage();
 
-  const beverageItems = t.lunchroomPage?.beveragesSection?.menuItems || [
-    "Fresh fruit smoothies",
-    "Specialty coffee & tea",
-    "Cold-pressed juices",
-    "Herbal infusions",
+  const items = t.eventspacePage?.weddingsSection?.items || [
+    "Elegant, neutral décor",
+    "Indoor/outdoor access",
+    "Full catering coordination",
+    "Wellness packages for guests",
   ];
 
   return (
-    <section className="py-24 bg-white min-h-screen flex items-center">
+    <section className="py-24 bg-[#E8DFD5] min-h-screen flex items-center">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row-reverse items-center justify-center gap-10 max-w-6xl mx-auto">
           {/* Image Section */}
           <div className="w-full lg:w-1/2">
             <div className="relative w-full h-[400px] lg:h-[560px] rounded-[18px] overflow-hidden">
               <Image
-                src="/images/lunchroom/smoothies/smoothies.png"
-                alt="Green Smoothie"
+                src="/images/eventspace/weddings/weddings.png"
+                alt="Weddings & Celebrations"
                 fill
                 className="object-cover"
               />
@@ -32,15 +32,15 @@ export default function BeveragesSection() {
 
           {/* Content Section */}
           <div className="w-full lg:w-1/2">
-            {/* Drinks Badge */}
+            {/* Badge */}
             <div className="flex justify-start mb-4">
               <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#FCF2E9] rounded-full border border-[#CFB9A3]">
-                <BiDrink className="w-4 h-4 text-[#8B7355]" />
+                <LuFlower2 className="w-4 h-4 text-[#8B7355]" />
                 <span
                   className="text-[#8B7355] text-sm font-medium"
                   style={{ fontFamily: "Cambria, Georgia, serif" }}
                 >
-                  {t.lunchroomPage?.beveragesSection?.badge || "Drinks"}
+                  {t.eventspacePage?.weddingsSection?.badge || "Celebration"}
                 </span>
               </div>
             </div>
@@ -50,8 +50,8 @@ export default function BeveragesSection() {
               style={{ fontFamily: "var(--font-playfair)" }}
               className="text-[clamp(32px,4vw,48px)] font-bold text-[#0F172A] mb-4"
             >
-              {t.lunchroomPage?.beveragesSection?.title ||
-                "Smoothies & Beverages"}
+              {t.eventspacePage?.weddingsSection?.title ||
+                "Weddings & Celebrations"}
             </h2>
 
             {/* Description */}
@@ -59,8 +59,8 @@ export default function BeveragesSection() {
               className="text-[#6B5D54] text-lg md:text-xl mb-4 leading-relaxed"
               style={{ fontFamily: "Cambria, Georgia, serif" }}
             >
-              {t.lunchroomPage?.beveragesSection?.description ||
-                "Revitalize with fresh smoothies, specialty coffees, herbal teas, and cold-pressed juices."}
+              {t.eventspacePage?.weddingsSection?.description ||
+                "Celebrate life's most precious moments in a setting that feels both intimate and expansive. The space offers the perfect blend of elegance and warmth."}
             </p>
 
             {/* Subtitle */}
@@ -68,13 +68,13 @@ export default function BeveragesSection() {
               className="text-[#475569] text-base md:text-lg mb-8 leading-relaxed"
               style={{ fontFamily: "Cambria, Georgia, serif" }}
             >
-              {t.lunchroomPage?.beveragesSection?.subtitle ||
-                "Each drink is crafted to energize, hydrate, and refresh."}
+              {t.eventspacePage?.weddingsSection?.subtitle ||
+                "From casual ceremonies to joyful receptions, we create an atmosphere that honors your unique story."}
             </p>
 
-            {/* Beverage Items List */}
+            {/* Items List */}
             <ul className="space-y-3">
-              {beverageItems.map((item, index) => (
+              {items.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="text-[#8B7355] mt-1.5 text-xl">•</span>
                   <span

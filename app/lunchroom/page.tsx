@@ -2,7 +2,6 @@
 import CTASection from "@/components/shared/CTASection";
 import Footer from "@/components/shared/Footer";
 import PageHero from "@/components/shared/PageHero";
-import WhatsIncluded from "@/components/shared/WhatsIncluded";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { BiCoffeeTogo } from "react-icons/bi";
 import { GiTomato } from "react-icons/gi";
@@ -10,7 +9,9 @@ import { IoNutritionOutline, IoRestaurantOutline } from "react-icons/io5";
 import { LuCakeSlice } from "react-icons/lu";
 import { PiArmchair } from "react-icons/pi";
 import BeveragesSection from "./components/BeveragesSection";
+import IceCreamSection from "./components/IceCreamSection";
 import MenuSection from "./components/MenuSection";
+import MoreToDiscover from "./components/MoreToDiscover";
 
 const LunchroomPage = () => {
   const { t } = useLanguage();
@@ -100,8 +101,14 @@ const LunchroomPage = () => {
       {/* Beverages Section */}
       <BeveragesSection />
 
+      {/* Ice Cream Section */}
+      <IceCreamSection />
+
+      {/* More to Discover Section */}
+      <MoreToDiscover />
+
       {/* What We Offer Section */}
-      <WhatsIncluded
+      {/* <WhatsIncluded
         title={t.lunchroomPage?.whatsIncluded?.title || "What We Offer"}
         subtitle={
           t.lunchroomPage?.whatsIncluded?.subtitle ||
@@ -109,17 +116,17 @@ const LunchroomPage = () => {
         }
         features={lunchroomFeatures}
         backgroundColor="#FFFFFF"
-      />
+      /> */}
 
       {/* CTA Section */}
       <CTASection
-        title={t.lunchroomPage?.cta?.title || "Join Us for Lunch"}
+        title={t.lunchroomPage?.cta?.title || "Visit the Lunchroom"}
         subtitle={
           t.lunchroomPage?.cta?.subtitle ||
-          "Reserve your table and enjoy a moment of calm and nourishment."
+          "Drop by during your next visit\u2014no reservation needed."
         }
-        buttonText={t.lunchroomPage?.cta?.button || "Reserve Table"}
-        buttonLink="/booking?type=lunchroom"
+        buttonText={t.lunchroomPage?.cta?.button || "Get in Touch"}
+        buttonLink="/contact"
         backgroundColor="#8B7355"
         textColor="#FFFFFF"
       />
