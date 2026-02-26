@@ -5,164 +5,135 @@ import Navbar from "@/components/shared/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { HiOutlineLockClosed, HiOutlineMail, HiOutlineUser } from "react-icons/hi";
-import { IoEyeOutline } from "react-icons/io5";
+import { FiArrowRight } from "react-icons/fi";
+import { HiOutlineEye, HiOutlineLockClosed, HiOutlineMail, HiOutlineUser } from "react-icons/hi";
 
 export default function SignupPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col font-cambria bg-white">
+    <div className="bg-white min-h-screen flex flex-col font-cambria">
       <Navbar />
-      <div className="h-[88px]" />
 
-      {/* Full-width 50/50 split — same as login page */}
-      <main className="flex-grow flex min-h-screen">
+      <main className="flex-grow flex items-center justify-center py-16 px-4 md:px-6">
+        <div className="max-w-[1240px] w-full grid grid-cols-1 md:grid-cols-2 bg-white overflow-hidden">
 
-        {/* LEFT — image fills full height, text centered */}
-        <div className="hidden md:block w-1/2 relative">
-          <Image
-            src="/images/login/login.png"
-            alt="Luxury sanctuary interior"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-10 text-white">
-            <h2 className="font-displayPlayFair text-4xl lg:text-5xl leading-[1.2] mb-5">
-              Welcome to the <br /> Circle of Stillness.
-            </h2>
-            <p className="text-sm leading-relaxed opacity-90 max-w-sm mb-5">
-              Membership unlocks exclusive arrangements, priority reservations,
-              and personalized wellness concierge services.
-            </p>
-            <div className="w-12 h-px bg-white/60" />
+          {/* Left Side: Image with Text Overlay (Matches Login Design) */}
+          <div className="relative h-[450px] md:h-[650px] flex flex-col justify-center p-12 lg:p-16 text-white">
+            <Image
+              src="/images/login/login.png"
+              alt="Luxury Room"
+              fill
+              className="absolute inset-0 w-full h-full object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/30" />
+
+            <div className="relative z-10 max-w-md">
+              <h2 className="text-4xl lg:text-5xl font-displayPlayFair leading-[1.2] mb-8">
+                Welcome to the <br /> Circle of Stillness.
+              </h2>
+              <p className="text-base lg:text-lg leading-relaxed font-light mb-6">
+                Membership unlocks exclusive arrangements, priority reservations, and personalized wellness concierge services.
+              </p>
+              <div className="w-16 h-[1.5px] bg-white/60" />
+            </div>
           </div>
-        </div>
 
-        {/* RIGHT — signup form, same compact style as login */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center gap-6 px-8 py-4 bg-white self-stretch">
-          <div className="w-full max-w-[500px]">
-
-            {/* Heading */}
-            <div className="mb-6">
-              <h1 className="font-displayPlayFair text-[32px] font-bold text-[#1d1a17] mb-2 leading-tight">
+          {/* Right Side: Signup Form (Same Style as Login) */}
+          <div className="flex flex-col justify-center p-8 md:p-16 lg:px-24 bg-white">
+            <div className="mb-10">
+              <h1 className="text-3xl lg:text-4xl font-displayPlayFair font-bold text-[#1d1a17] mb-3">
                 Member Access
               </h1>
-              <p className="text-sm text-[#64748B] font-light">
-                Welcome back. Your Heaven awaits.
+              <p className="text-base text-[#8b7355] font-light">
+                Create your account. Your Heaven awaits.
               </p>
             </div>
 
-            <form className="flex flex-col gap-3" onSubmit={(e) => e.preventDefault()}>
-
-              {/* Name */}
-              <div className="flex flex-col gap-1.5">
-                <label
-                  htmlFor="name"
-                  className="text-[11px] font-medium text-[#1d1a17] uppercase tracking-wide"
-                  style={{ fontFamily: "Cambria, serif" }}
-                >
-                  Name
+            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+              {/* Full Name */}
+              <div className="space-y-2">
+                <label className="text-[13px] text-[#1d1a17] font-medium" htmlFor="name">
+                  Full Name
                 </label>
                 <div className="relative">
-                  <span className="absolute inset-y-0 left-3 flex items-center text-[#94A3B8] pointer-events-none">
-                    <HiOutlineUser className="w-4 h-4" />
-                  </span>
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#9d8b7a]">
+                    <HiOutlineUser className="w-5 h-5" />
+                  </div>
                   <input
                     id="name"
                     type="text"
-                    placeholder="Alex"
-                    className="w-full pl-9 pr-3 py-2.5 border border-[#E2E8F0] rounded-sm text-sm text-[#1d1a17] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#8b7355] transition-colors"
-                    style={{ fontFamily: "Cambria, serif" }}
+                    placeholder="Enter your name"
+                    className="w-full pl-10 pr-4 py-3 border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#8b7355] text-sm text-[#1d1a17] placeholder:text-[#9d8b7a]/50"
                   />
                 </div>
               </div>
 
-              {/* Email */}
-              <div className="flex flex-col gap-1.5">
-                <label
-                  htmlFor="email"
-                  className="text-[11px] font-medium text-[#1d1a17] uppercase tracking-wide"
-                  style={{ fontFamily: "Cambria, serif" }}
-                >
+              {/* Email Address */}
+              <div className="space-y-2">
+                <label className="text-[13px] text-[#1d1a17] font-medium" htmlFor="email">
                   Email Address
                 </label>
                 <div className="relative">
-                  <span className="absolute inset-y-0 left-3 flex items-center text-[#94A3B8] pointer-events-none">
-                    <HiOutlineMail className="w-4 h-4" />
-                  </span>
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#9d8b7a]">
+                    <HiOutlineMail className="w-5 h-5" />
+                  </div>
                   <input
                     id="email"
                     type="email"
                     placeholder="you@example.com"
-                    className="w-full pl-9 pr-3 py-2.5 border border-[#E2E8F0] rounded-sm text-sm text-[#1d1a17] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#8b7355] transition-colors"
-                    style={{ fontFamily: "Cambria, serif" }}
+                    className="w-full pl-10 pr-4 py-3 border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#8b7355] text-sm text-[#1d1a17] placeholder:text-[#9d8b7a]/50"
                   />
                 </div>
               </div>
 
               {/* Password */}
-              <div className="flex flex-col gap-1.5">
-                <label
-                  htmlFor="password"
-                  className="text-[11px] font-medium text-[#1d1a17] uppercase tracking-wide"
-                  style={{ fontFamily: "Cambria, serif" }}
-                >
+              <div className="space-y-2">
+                <label className="text-[13px] text-[#1d1a17] font-medium" htmlFor="password">
                   Password
                 </label>
                 <div className="relative">
-                  <span className="absolute inset-y-0 left-3 flex items-center text-[#94A3B8] pointer-events-none">
-                    <HiOutlineLockClosed className="w-4 h-4" />
-                  </span>
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[#9d8b7a]">
+                    <HiOutlineLockClosed className="w-5 h-5" />
+                  </div>
                   <input
                     id="password"
                     type={showPassword ? "text" : "password"}
-                    placeholder="••••••••"
-                    className="w-full pl-9 pr-10 py-2.5 border border-[#E2E8F0] rounded-sm text-sm text-[#1d1a17] focus:outline-none focus:border-[#8b7355] transition-colors"
-                    style={{ fontFamily: "Cambria, serif" }}
+                    placeholder="********"
+                    className="w-full pl-10 pr-12 py-3 border border-[#E2E8F0] rounded-sm focus:outline-none focus:border-[#8b7355] text-sm text-[#1d1a17]"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute inset-y-0 right-0 px-3 flex items-center text-[#94A3B8] hover:text-[#8b7355]"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-[#9d8b7a] hover:text-[#8b7355]"
                   >
-                    <IoEyeOutline className="w-4 h-4" />
+                    <HiOutlineEye className="w-5 h-5" />
                   </button>
                 </div>
               </div>
 
-              {/* Submit */}
-              <button
-                type="submit"
-                className="w-full flex items-center justify-center gap-2 py-3.5 mt-1 bg-[#CFB9A3] hover:bg-[#bfa77f] text-white text-xs font-bold uppercase tracking-widest rounded-sm transition-colors"
-                style={{ boxShadow: "0 0 20px 0 rgba(202,117,33,0.30)" }}
-              >
-                Sign Up
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M5 12H19M19 12L12 5M19 12L12 19"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-
-              {/* Log in link */}
-              <p className="text-center text-xs text-[#64748B] pt-3 border-t border-[#f1f5f9]">
-                Already have an account?{" "}
-                <Link
-                  href="/login"
-                  className="text-[#CFB9A3] hover:text-[#8b7355] font-semibold ml-0.5 transition-colors"
+              {/* Signup Button */}
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  className="w-full flex items-center justify-center space-x-2 py-4 bg-[#D1BC9D] hover:bg-[#8B7355] text-white font-bold rounded-sm transition-colors uppercase tracking-widest text-sm"
                 >
-                  Log In
-                </Link>
-              </p>
-            </form>
+                  <span>Sign Up</span>
+                  <FiArrowRight className="w-4 h-4" />
+                </button>
+              </div>
 
+              {/* Redirect to Login */}
+              <div className="text-center pt-6">
+                <p className="text-[#9d8b7a] text-sm">
+                  Already have an account?{" "}
+                  <Link href="/login" className="text-[#d1bc9d] hover:underline font-medium ml-1">
+                    Log In
+                  </Link>
+                </p>
+              </div>
+            </form>
           </div>
         </div>
       </main>

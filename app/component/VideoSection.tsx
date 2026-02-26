@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 
 const VideoSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
 
   const handlePlay = () => {
     if (!videoRef.current) return;
@@ -20,11 +20,15 @@ const VideoSection = () => {
     <section className="relative w-full h-screen overflow-hidden">
       <video
         ref={videoRef}
-        src="/videos/home/video1.mp4"
         className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
         loop
         playsInline
-      />
+        preload="auto"
+      >
+        <source src="/videos/home/video1.mp4" type="video/mp4" />
+      </video>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/30" />

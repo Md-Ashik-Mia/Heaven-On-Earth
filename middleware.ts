@@ -9,6 +9,10 @@ const publicPaths = [
   "/memberships",
   "/activities",
   "/contact",
+  "/booking",
+  "/lunchroom",
+  "/eventspace",
+  "/signup",
   "/book",
   "/login",
 ];

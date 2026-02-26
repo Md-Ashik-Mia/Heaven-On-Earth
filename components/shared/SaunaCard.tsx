@@ -15,7 +15,9 @@ interface SaunaCardProps {
   duration: string;
   paymentType: string;
   price: number;
-  bookingLink: string;
+  bookingLink?: string;
+  onClick?: () => void;
+  isSelected?: boolean;
 }
 
 export default function SaunaCard({
@@ -28,29 +30,37 @@ export default function SaunaCard({
   paymentType,
   price,
   bookingLink,
+  onClick,
+  isSelected,
 }: SaunaCardProps) {
-  return (
-    <div className="flex flex-col bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+  const content = (
+    <div
+      onClick={onClick}
+      className={`bg-white rounded-[24px] overflow-hidden flex flex-col cursor-pointer transition-all duration-500 border-2 ${
+        isSelected ? "border-[#CFB9A3] ring-2 ring-[#CFB9A3] ring-opacity-20 translate-y-[-4px]" : "border-transparent"
+      }`}
+      style={{ boxShadow: "0 10px 30px -5px rgba(0,0,0,0.1)" }}
+    >
       {/* Image Section with Rating Badge */}
-      <div className="relative w-full h-[320px]">
+      <div className="relative w-full h-64 md:h-72">
         <Image src={image} alt={title} fill className="object-cover" />
         {/* Rating Badge */}
-        <div className="absolute top-4 right-4 bg-white rounded-full px-4 py-2 shadow-lg flex items-center gap-2">
+        <div
+          className="absolute top-4 right-4 bg-white/95 rounded-[14px] px-3 py-2 shadow-lg flex items-center gap-1.5"
+          style={{ boxShadow: "0 10px 15px -3px rgba(0,0,0,0.10), 0 4px 6px -4px rgba(0,0,0,0.10)" }}
+        >
           <svg
-            width="24"
-            height="24"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
-            fill="none"
+            fill="#FDC700"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-              fill="#FDC700"
-            />
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
           </svg>
           <span
-            style={{ fontFamily: "var(--font-playfair)" }}
-            className="text-lg font-bold text-[#0F172A]"
+            style={{ fontFamily: "Inter, sans-serif" }}
+            className="text-base font-bold text-[#0F172A]"
           >
             {rating}
           </span>
@@ -58,28 +68,28 @@ export default function SaunaCard({
       </div>
 
       {/* Content Section */}
-      <div className="p-6 flex flex-col grow">
+      <div className="p-8 flex flex-col grow gap-4">
         {/* Title */}
         <h3
           style={{ fontFamily: "var(--font-playfair)" }}
-          className="text-[32px] font-bold text-[#0F172A] mb-3"
+          className="text-3xl font-bold text-[#0F172A]"
         >
           {title}
         </h3>
 
         {/* Description */}
         <p
-          className="text-[#475569] text-base mb-6"
+          className="text-[#475569] text-base leading-relaxed"
           style={{ fontFamily: "Cambria, Georgia, serif" }}
         >
           {description}
         </p>
 
         {/* Features List */}
-        <div className="flex flex-col gap-4 mb-6">
+        <div className="flex flex-col gap-4 my-2">
           {/* Capacity */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#FF6B4A1A] bg-opacity-10 flex items-center justify-center shrink-0">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-full bg-[#FF6B4A1A] flex items-center justify-center shrink-0">
               <LuUsers className="w-5 h-5 text-[#CFB9A3]" strokeWidth={1.5} />
             </div>
             <span
@@ -91,8 +101,8 @@ export default function SaunaCard({
           </div>
 
           {/* Duration */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#FF6B4A1A] bg-opacity-10 flex items-center justify-center shrink-0">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-full bg-[#FF6B4A1A] flex items-center justify-center shrink-0">
               <FiClock className="w-5 h-5 text-[#CFB9A3]" strokeWidth={1.5} />
             </div>
             <span
@@ -104,8 +114,8 @@ export default function SaunaCard({
           </div>
 
           {/* Payment */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-[#FF6B4A1A] bg-opacity-10 flex items-center justify-center shrink-0">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-full bg-[#FF6B4A1A] flex items-center justify-center shrink-0">
               <IoFolderOutline
                 className="w-5 h-5 text-[#CFB9A3]"
                 strokeWidth={1.5}
@@ -120,48 +130,29 @@ export default function SaunaCard({
           </div>
         </div>
 
-        {/* Price and Button */}
-        <div className="mt-auto flex items-center justify-between pt-4">
-          <div>
-            <span
-              style={{ fontFamily: "var(--font-playfair)" }}
-              className="text-[36px] font-bold text-[#0F172A]"
-            >
-              ${price}
-            </span>
-          </div>
+        <div className="flex-1" />
 
-          <Link
-            href={bookingLink}
-            className="inline-flex items-center gap-3 px-8 py-4 border border-[#CFB9A3] text-[#0F172A] font-bold rounded-sm hover:bg-[#CFB9A3] hover:bg-opacity-10 transition-colors"
+        {/* Price Section */}
+        <div className="pt-6 border-t border-[#E2E8F0] flex items-center justify-between">
+          <span className="text-sm font-bold text-[#64748B] uppercase tracking-wider" style={{ fontFamily: "Inter, sans-serif" }}>Investment</span>
+          <span
             style={{ fontFamily: "var(--font-playfair)" }}
+            className="text-4xl font-bold text-[#0F172A]"
           >
-            Book Sauna
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5 12H19"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M12 5L19 12L12 19"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+            ${price}
+          </span>
         </div>
       </div>
     </div>
   );
+
+  if (bookingLink) {
+    return (
+      <Link href={bookingLink} className="block grow">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }

@@ -159,7 +159,7 @@ const Navbar = () => {
               />
             </svg>
           </Link>
-          <BookNow href="/book" />
+          <BookNow href="/booking" />
         </div>
 
         <button
@@ -239,7 +239,7 @@ const Navbar = () => {
                   />
                 </svg>
               </Link>
-              <BookNow href="/book" className="w-full justify-center" />
+              <BookNow href="/booking" className="w-full justify-center" />
             </div>
           </div>
         </div>
